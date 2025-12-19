@@ -15,7 +15,7 @@ const App = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
       {
-        token === "a"
+        token === ""
         ? <Login />
         : 
         <>
