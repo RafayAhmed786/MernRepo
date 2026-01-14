@@ -13,6 +13,7 @@ const ShopContextProvider = (props) => {
     const [search, setSearch] = useState('');
     const [showSearch, setShowSearch] = useState(false);
     const [cartItem, setCartItem] = useState({});
+    const [token, setToken] = useState('');
     const [products, setProducts] = useState([]);
     const navigate = useNavigate();
 
@@ -51,7 +52,7 @@ const ShopContextProvider = (props) => {
                         totalCount += cartItem[items][item];
                     }
                 } catch (error) {
-                    
+                    console.log(error);
                 }
             }
         }
@@ -76,7 +77,7 @@ const ShopContextProvider = (props) => {
                         totalAmount += itemInfo.price * cartItem[items][item];
                     }
                 } catch (error) {
-                    
+                    console.log(error);
                 }
             }
         }
@@ -106,7 +107,8 @@ const ShopContextProvider = (props) => {
         products, currency, delivery_fee,
         search,setSearch,showSearch,setShowSearch,
         cartItem,addToCart, navigate,
-        getCartCount, updateQuantity, getCartAmout, backendUrl
+        getCartCount, updateQuantity, getCartAmout, backendUrl,
+        setToken, token
     }
 
     return (

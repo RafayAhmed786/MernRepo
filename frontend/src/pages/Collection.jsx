@@ -74,7 +74,7 @@ const { products, search, showSearch } = useContext(ShopContext);
 
   useEffect(() => {
     applyFilter();
-  }, [category, subCategory, search, showSearch])
+  }, [category, subCategory, search, showSearch, products])
 
   
   useEffect(() => {
